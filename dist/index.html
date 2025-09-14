@@ -19,7 +19,7 @@
 	</style>
 
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20250914190104">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250914213602">
 	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 
@@ -27,7 +27,7 @@
 	Speed of Readiness">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="js/app.min.js?_v=20250914190104" defer></script>
+	<script src="js/app.min.js?_v=20250914213602" defer></script>
 </head>
 
 <body>
@@ -52,6 +52,12 @@
 
 		</header>
 		<main class="page ">
+			<!-- TODO 
+			
+			1.add swiper
+			2.add animations
+			
+			-->
 
 			<section class="hero section section--yellow" aria-labelledby="hero">
 				<div class="hero__container">
@@ -204,6 +210,72 @@
 						<sup>Voices from the</sup> <span text="Field">Field</span>
 						<img class="reviews__title-decor" src="img/hero/title-decor.svg" alt="title-decor">
 					</h2>
+
+					<div class="reviews__slider swiper-reviews">
+						<div class="reviews__wrapper swiper-wrapper">
+							<div class="reviews__slide swiper-slide">
+								<div class="item-review">
+									<img class="item-review__icon" src="img/reviews/quotes.svg" alt="Image">
+									<p class="item-review__text">
+										Drones from the West fail on the field of battle.
+									</p>
+									<div class="item-review__author">
+										Ukrainian Drone Operator
+									</div>
+								</div>
+							</div>
+							<div class="reviews__slide swiper-slide">
+								<div class="item-review">
+									<img class="item-review__icon" src="img/reviews/quotes.svg" alt="Image">
+									<p class="item-review__text">
+										TRL 9 on day one is meaningless. Most equipment fails once exposed to real combat conditions.
+									</p>
+									<div class="item-review__author">
+										Ken Toth, U.S. Special Forces
+									</div>
+								</div>
+							</div>
+							<div class="reviews__slide swiper-slide">
+								<div class="item-review">
+									<img class="item-review__icon" src="img/reviews/quotes.svg" alt="Image">
+									<p class="item-review__text">
+										Drones from the West fail on the field of battle.
+									</p>
+									<div class="item-review__author">
+										Ukrainian Drone Operator
+									</div>
+								</div>
+							</div>
+							<div class="reviews__slide swiper-slide">
+								<div class="item-review">
+									<img class="item-review__icon" src="img/reviews/quotes.svg" alt="Image">
+									<p class="item-review__text">
+										TRL 9 on day one is meaningless. Most equipment fails once exposed to real combat conditions.
+									</p>
+									<div class="item-review__author">
+										Ken Toth, U.S. Special Forces
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="navigation">
+							<div class="navigation__pagination"></div>
+							<button class="navigation__button navigation__button--prev" aria-label="arrow-left">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#arrow-left"></use>
+								</svg>
+							</button>
+							<button class="navigation__button navigation__button--next" aria-label="arrow-right">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#arrow-right"></use>
+								</svg>
+							</button>
+						</div>
+
+						<button type="button" class="swiper-button-prev"></button>
+						<button type="button" class="swiper-button-next"></button>
+
+					</div>
 
 					<img class="reviews__bottom-icon" src="img/reviews/icon-bottom.svg" alt="icon">
 				</div>

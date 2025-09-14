@@ -518,12 +518,13 @@
 	}
 }
 
-//========================== (reviews 15m)
+//========================== (reviews 35m)
 .reviews {
 	// .reviews__container
 	&__container {
 		position: relative;
 		z-index: 1;
+		overflow: hidden;
 	}
 	// .reviews__top-icon
 	&__top-icon {
@@ -557,6 +558,7 @@
 		position: relative;
 		z-index: 1;
 		gap: toRem(8);
+		margin-bottom: toRem(-15);
 		& sup {
 			opacity: 0.3;
 			padding-bottom: toRem(10);
@@ -565,6 +567,11 @@
 			flex: 0 0 fit-content;
 			opacity: 1;
 			@include adaptiveValue("font-size", 140, 80);
+			line-height: 1;
+			margin-bottom: toRem(-5);
+			&::before {
+				line-height: 1;
+			}
 		}
 	}
 	// .reviews__title-decor
