@@ -9,36 +9,59 @@
 		line-height: 0.92;
 
 		span {
-			// TODO add text shadow?
-			text-shadow: toRem(2) 0 0 0 var(--white);
+			color: var(--white);
+			position: relative;
+			display: inline-block;
+			line-height: inherit;
+			height: fit-content;
+			line-height: 1.22;
+			&::before {
+				display: inline-block;
+				content: attr(text);
+				position: absolute;
+				width: fit-content;
+				height: fit-content;
+				text-wrap: nowrap;
+				top: 50%;
+				left: 50%;
+				font-size: inherit;
+				transform: translate(-51%, -51%);
+				line-height: inherit;
+			}
 		}
 	}
 
 	// .title--yellow
 	&--yellow {
 		& span {
-			background: linear-gradient(248deg, #f2edd4 0%, #b9b6a6 49.52%, #c9c197 100%);
-			background-clip: text;
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
+			&::before {
+				background: linear-gradient(248deg, #f2edd4 0%, #b9b6a6 49.52%, #c9c197 100%);
+				background-clip: text;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
 		}
 	}
 	&--violet {
 		& span {
-			background: linear-gradient(248deg, #d4daf2 0%, #a6aab9 49.52%, #97a0c9 100%);
-			background-clip: text;
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
+			&::before {
+				background: linear-gradient(248deg, #d4daf2 0%, #a6aab9 49.52%, #97a0c9 100%);
+				background-clip: text;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
 		}
 	}
 
 	// .title--gray
 	&--gray {
 		& span {
-			background: linear-gradient(248deg, #d4e7f2 0%, #a6b3b9 49.52%, #97b7c9 100%);
-			background-clip: text;
-			-webkit-background-clip: text;
-			-webkit-text-fill-color: transparent;
+			&::before {
+				background: linear-gradient(248deg, #d4e7f2 0%, #a6b3b9 49.52%, #97b7c9 100%);
+				background-clip: text;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
 		}
 	}
 }
@@ -62,7 +85,8 @@
 			width: 100%;
 			height: 100%;
 			inset: 0;
-			background: linear-gradient(180deg, rgba(82, 89, 122, 1) 0%, rgba(255, 255, 255, 0) 100%), url("@img/pattern.png");
+			background:
+				linear-gradient(180deg, rgba(82, 89, 122, 1) 0%, rgba(255, 255, 255, 0) 100%), url("@img/pattern.png");
 		}
 	}
 
