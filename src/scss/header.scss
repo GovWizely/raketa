@@ -1,0 +1,132 @@
+.header {
+	position: fixed;
+	width: 100%;
+	height: fit-content;
+	top: 0;
+	left: 0;
+	z-index: 10;
+
+	// .header__container
+	&__container {
+		display: flex;
+
+		align-items: center;
+		padding-block: toRem(26);
+		gap: toRem(24);
+		justify-content: space-between;
+		@media (min-width: $mobileSmall) {
+			min-height: toRem(110);
+		}
+		@media (min-width: $mobile) {
+			min-height: toRem(150);
+		}
+	}
+	// .header__logo
+	&__logo {
+		flex-shrink: 0;
+		position: relative;
+		z-index: 2;
+		@media (min-width: $mobile) {
+			width: toRem(50);
+			height: toRem(53);
+		}
+		@media (max-width: $mobile) {
+			width: toRem(42);
+			height: toRem(44);
+		}
+	}
+	// .header__menu
+	&__menu {
+	}
+}
+.menu {
+	// .menu__icon
+	&__icon {
+	}
+	// .menu__body
+	&__body {
+		position: fixed;
+		width: 100%;
+		height: 100%;
+		right: -100%;
+		top: 0;
+		overflow: auto;
+		padding: toRem(150) toRem(16);
+		transition: right 0.3s;
+		background-color: rgba(136, 147, 205, 0.8);
+		// &::before {
+		// 	content: "";
+		// 	position: fixed;
+		// 	width: 100%;
+		// 	height: toRem(70);
+		// 	left: -100%;
+		// 	top: 0;
+		// 	transition: left 0.3s;
+		// 	z-index: 2;
+		// }
+		.menu-open & {
+			right: 0;
+			// &::before {
+			// 	left: 0;
+			// }
+		}
+	}
+	// .menu__list
+	&__list {
+		display: grid;
+		gap: toRem(24);
+		@media (min-width: $tablet) {
+			max-width: toRem(1200);
+			margin-inline: auto;
+		}
+	}
+	// .menu__item
+	&__item {
+	}
+	// .menu__link
+	&__link {
+		@include adaptiveValue("font-size", 32, 24);
+	}
+}
+
+//Burger Icon
+.icon-menu {
+	background: rgba(255, 255, 255, 0.15);
+	border-radius: toRem(6);
+	padding: toRem(16);
+	width: toRem(52);
+	height: toRem(40);
+	display: none;
+	display: block;
+	position: relative;
+	z-index: 5;
+	@media (any-hover: none) {
+		cursor: default;
+	}
+	&::before,
+	&::after {
+		content: "";
+		transition: all 0.3s ease 0s;
+		left: toRem(16);
+		position: absolute;
+		width: toRem(20);
+		height: toRem(2);
+		background: var(--white-60);
+	}
+	&::before {
+		top: toRem(16);
+	}
+	&::after {
+		bottom: toRem(16);
+	}
+	.menu-open & {
+		&::before {
+			top: calc(50% - toRem(1));
+			transform: rotate(-45deg);
+		}
+		&::after {
+			bottom: calc(50% - toRem(1));
+			transform: rotate(45deg);
+		}
+	}
+}

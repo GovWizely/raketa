@@ -18,7 +18,7 @@
 
 // шрифт за замовчуванням
 $fontFamily: "Inter", sans-serif;
-$fontSize: toRem(14); // де 14(px) - розмір шрифту за замовчуванням з макету
+// $fontSize: toRem(14); // де 14(px) - розмір шрифту за замовчуванням з макету
 
 // Основні кольори
 $mainColor: var(--white); // Колір шрифту за замовчуванням
@@ -32,11 +32,10 @@ $minWidth: 360;
 // Ширина полотна (макету)
 $maxWidth: 1920;
 // Ширина обмежуючого контейнера (0 = немає обмеження)
-$maxWidthContainer: 1170; //!TODO add
+$maxWidthContainer: 1192;
 // Загальний відступ у контейнера
 // (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
-$containerPadding: 30;
-//!TODO 32 >16
+$containerPadding: 32;
 
 // Ширина спрацьовування першого брейкпоінту
 $containerWidth: $maxWidthContainer + $containerPadding;
@@ -44,7 +43,7 @@ $containerWidth: $maxWidthContainer + $containerPadding;
 //======== Брейк-поїнти========
 $pc: toEm($containerWidth); // ПК, ноутбуки, деякі планшети у горизонтальному положенні
 $tablet: toEm(991.98); // Планшети, деякі телефони в горизонтальному положенні
-$mobile: toEm(767.98); // Телефони L
+$mobile: toEm(768.98); // Телефони L
 $mobileSmall: toEm(479.98); // Телефони S
 
 $pcWidth: $containerWidth;
@@ -75,7 +74,6 @@ html {
 
 // Стилі тега BODY
 body {
-
 	// scrollbar-gutter: stable;
 	// Скролл заблоковано
 	.lock & {
@@ -85,7 +83,19 @@ body {
 	}
 
 	// Сайт завантажений
-	.loaded & {}
+	.loaded & {
+	}
+	font-weight: 500;
+	line-height: 1.23;
+	letter-spacing: -0.05em;
+	color: var(--white-60);
+	background-color: var(--air);
+	@media (min-width: $mobile) {
+		font-size: toRem(22);
+	}
+	@media (max-width: $mobile) {
+		font-size: toRem(20);
+	}
 }
 
 // Оболонка wrapper
@@ -100,12 +110,12 @@ body {
 	}
 
 	// Притискаємо footer
-	>main {
+	> main {
 		flex: 1 1 auto;
 	}
 
 	// Фікс для слайдерів
-	>* {
+	> * {
 		min-width: 0;
 	}
 }
@@ -118,38 +128,36 @@ body {
 // Сніппет (HTML): cnt
 
 @if ($responsiveType==1) {
-
 	// Чуйна
 	[class*="__container"] {
 		@if ($maxWidthContainer>0) {
 			max-width: toRem($containerWidth);
 			margin: 0 auto;
+			@media (min-width: $mobileSmall) {
+				padding-inline: toRem(32);
+			}
+			@media (max-width: $mobileSmall) {
+				padding-inline: toRem(16);
+			}
 		}
 
 		@if ($containerPadding>0) {
 			@if ($maxWidthContainer>0) {
 				padding: 0 toRem(math.div($containerPadding, 2));
-			}
-
-			@else {
-				@include adaptiveValue("padding-left", math.div($containerPadding, 2), 15);
-				@include adaptiveValue("padding-right", math.div($containerPadding, 2), 15);
+			} @else {
+				@include adaptiveValue("padding-left", math.div($containerPadding, 2), 16);
+				@include adaptiveValue("padding-right", math.div($containerPadding, 2), 16);
 			}
 		}
 	}
-}
-
-@else {
-
+} @else {
 	// Брейк-поїнтами
 	[class*="__container"] {
 		margin: 0 auto;
 
 		@if ($maxWidthContainer>0) {
 			max-width: toRem($containerWidth);
-		}
-
-		@else {
+		} @else {
 			@if ($containerPadding>0) {
 				padding: 0 toRem(math.div($containerPadding, 2));
 			}
