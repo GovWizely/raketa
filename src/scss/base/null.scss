@@ -61,6 +61,10 @@ select,
 option {
 	cursor: pointer;
 }
+a,
+button {
+	-webkit-tap-highlight-color: transparent;
+}
 a {
 	display: inline-block;
 	color: inherit;

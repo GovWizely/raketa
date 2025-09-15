@@ -7,31 +7,29 @@
 		@@include('html/_header.htm',{})
 		<main class="page ">
 			<!-- TODO 
-			
-			1.add swiper
 			2.add animations
-			
 			-->
 
 			<section class="hero section section--yellow" aria-labelledby="hero">
 				<div class="hero__container">
-					<img class="hero__top-icon" src="@img/hero/icon.svg" alt="icon">
-					<img class="hero__image" src="@img/hero/turrel.png" alt="turrel">
+					<img class="hero__top-icon delay-6" data-watch data-watch-once src="@img/hero/icon.svg" alt="icon">
+					<img class="hero__image " src="@img/hero/turrel.png" alt="turrel">
 					<div class="hero__content">
-						<img class="hero__icon" src="@img/hero/title-icon.svg" alt="icon">
-						<h2 class="hero__title title title--2 title--yellow" id="hero">
+						<img class="hero__icon  delay-6" data-watch data-watch-once src="@img/hero/title-icon.svg" alt="icon">
+						<h2 class="hero__title title title--2 title--yellow left delay-2" data-watch data-watch-once id="hero">
 							DevWar: Innovation at the
 							Speed of <span text="Readiness">Readiness</span>
-							<img class="hero__title-decor" src="@img/hero/title-decor.svg" alt="title-decor">
+							<img class="hero__title-decor delay-4" data-watch data-watch-once src="@img/hero/title-decor.svg"
+								alt="title-decor">
 						</h2>
 						<div class="hero__text">
-							<p>
+							<p data-watch data-watch-once class="delay-4 bottom ">
 								The future of warfare is built in the field, <span>not in labs</span>. <br>
 								DevWar turns frontline feedback
 								into <span>combat‑ready</span> updates
 								within days — a model born in Ukraine and built to <span>modernize forces</span> worldwide.
 							</p>
-							<p>
+							<p data-watch data-watch-once class="delay-5 bottom ">
 								Paketa brings DevWar to the U.S., <span>helping militaries adopt</span> the same practices that gave
 								Ukraine its edge, while <span>honoring</span>
 								the innovators who created them under fire.
@@ -45,20 +43,23 @@
 
 			<section class="companies section section--violet" aria-labelledby="companies">
 				<div class="companies__container">
-					<img class="companies__top-icon" src="@img/companies/icon.svg" alt="icon">
+					<img loading="lazy" class="companies__top-icon delay-4" data-watch data-watch-once
+						src="@img/companies/icon.svg" alt="icon">
 					<div class="companies__header">
-						<img class="companies__icon" src="@img/companies/title-icon.svg" alt="icon">
-						<h2 class="companies__title title title--2 title--violet" id="companies">
+						<img loading="lazy" class="companies__icon delay-4" data-watch data-watch-once
+							src="@img/companies/title-icon.svg" alt="icon">
+						<h2 class="companies__title title title--2 title--violet left" data-watch data-watch-once id="companies">
 							Combat Condition Testing
 							For U.S. <span text="Companies">Companies</span>
-							<img class="companies__title-decor" src="@img/companies/title-decor.svg" alt="title-decor">
+							<img loading="lazy" class="companies__title-decor delay-4" data-watch data-watch-once
+								src="@img/companies/title-decor.svg" alt="title-decor">
 						</h2>
-						<p class="companies__text">
+						<p class="companies__text bottom" data-watch data-watch-once>
 							Paketa gives U.S. defense companies a direct path to live battlefield validation in Ukraine.
 						</p>
 					</div>
 					<ul class="companies__list">
-						<li class="item-companies">
+						<li class="item-companies bottom delay-1" data-watch data-watch-once>
 							<div class="item-companies__label label">
 								You get
 							</div>
@@ -69,7 +70,7 @@
 								and live enemy action.
 							</p>
 						</li>
-						<li class="item-companies">
+						<li class="item-companies bottom delay-2" data-watch data-watch-once>
 							<div class="item-companies__label label">
 								Ukraine gets
 							</div>
@@ -77,7 +78,7 @@
 								Direct exposure to your system in use, informing <span>Ministry of Defense</span> procurement decisions.
 							</p>
 						</li>
-						<li class="item-companies">
+						<li class="item-companies bottom delay-3" data-watch data-watch-once>
 							<div class="item-companies__label label">
 								The result
 							</div>
@@ -95,27 +96,29 @@
 
 			<section class="drones section" aria-labelledby="drones">
 				<div class="drones__container">
-					<img class="drones__bg" src="@img/drones/quadrocopter.png" alt="quadrocopter">
+					<img loading="lazy" class="drones__bg" src="@img/drones/quadrocopter.png" alt="quadrocopter">
 
-					<img class="drones__top-icon" src="@img/drones/icon-top.svg" alt="icon">
+					<img loading="lazy" class="drones__top-icon delay-6" data-watch data-watch-once src="@img/drones/icon-top.svg"
+						alt="icon">
 					<div class="drones__content">
-						<h2 class="drones__title title title--2 title--gray" id="drones">
+						<h2 class="drones__title title title--2 title--gray left" data-watch data-watch-once id="drones">
 							AI-Powered <span text="Drones">Drones</span>
-							<img class="drones__title-decor" src="@img/drones/title-docor.svg" alt="title-decor">
+							<img loading="lazy" class="drones__title-decor" src="@img/drones/title-docor.svg" alt="title-decor">
 						</h2>
-						<p class="drones__text">
+						<p class="drones__text bottom delay-2" data-watch data-watch-once>
 							Unmanned platforms built to perform in <span>contested environments:</span>
 						</p>
-						<ul class="drones__list">
+						<ul class="drones__list bottom delay-3" data-watch data-watch-once>
 							<li class="drones__item">Electronic warfare resilience</li>
 							<li class="drones__item">Autonomous decision-making</li>
 							<li class="drones__item">Proven reliability under pressure</li>
 						</ul>
-						<div class="drones__description">
+						<div class="drones__description delay-4" data-watch data-watch-once>
 							<p>Designed for <span>conflict.</span></p>
 							<p>Ready for <span>modernization</span> and deterrence.</p>
 						</div>
-						<img class="drones__icon" src="@img/drones/icon-bottom.svg" alt="icon">
+						<img loading="lazy" class="drones__icon delay-6" data-watch data-watch-once
+							src="@img/drones/icon-bottom.svg" alt="icon">
 
 					</div>
 
@@ -127,12 +130,13 @@
 			<section class="partnership section section--violet" aria-labelledby="partnership">
 				<div class="partnership__container">
 
-					<img class="partnership__top-icon" src="@img/partnership/icon-top.svg" alt="icon">
+					<img loading="lazy" class="partnership__top-icon" src="@img/partnership/icon-top.svg" alt="icon">
 					<div class="partnership__content ">
-						<img class="partnership__icon" src="@img/partnership/icon-title.svg" alt="icon">
+						<img loading="lazy" class="partnership__icon" src="@img/partnership/icon-title.svg" alt="icon">
 						<h2 class="partnership__title title title--2 title--violet" id="partnership">
 							Partnership & <br> <span text="Bridge Role">Bridge Role</span>
-							<img class="partnership__title-decor" src="@img/partnership/title-decor.svg" alt="title-decor">
+							<img loading="lazy" class="partnership__title-decor" src="@img/partnership/title-decor.svg"
+								alt="title-decor">
 						</h2>
 
 						<div class="partnership__text">
@@ -158,94 +162,94 @@
 
 			<section class="reviews section section--yellow" aria-labelledby="reviews">
 				<div class="reviews__container">
-					<img class="reviews__top-icon" src="@img/reviews/icon-top.svg" alt="icon">
+					<img loading="lazy" class="reviews__top-icon" src="@img/reviews/icon-top.svg" alt="icon">
 
 					<h2 class="reviews__title title title--2 title--yellow" id="reviews">
 						<sup>Voices from the</sup> <span text="Field">Field</span>
-						<img class="reviews__title-decor" src="@img/hero/title-decor.svg" alt="title-decor">
+						<img loading="lazy" class="reviews__title-decor" src="@img/hero/title-decor.svg" alt="title-decor">
 					</h2>
-
-					<div class="reviews__slider swiper-reviews">
-						<div class="reviews__wrapper swiper-wrapper">
-							<div class="reviews__slide swiper-slide">
-								<div class="item-review">
-									<img class="item-review__icon" src="@img/reviews/quotes.svg" alt="Image">
-									<p class="item-review__text">
-										Drones from the West fail on the field of battle.
-									</p>
-									<div class="item-review__author">
-										Ukrainian Drone Operator
+					<div class="reviews__body">
+						<div class="reviews__slider swiper-reviews">
+							<div class="reviews__wrapper swiper-wrapper">
+								<div class="reviews__slide swiper-slide">
+									<div class="item-review">
+										<img loading="lazy" class="item-review__icon" src="@img/reviews/quotes.svg" alt="Image">
+										<p class="item-review__text">
+											Drones from the West fail on the field of battle.
+										</p>
+										<div class="item-review__author">
+											Ukrainian Drone Operator
+										</div>
+									</div>
+								</div>
+								<div class="reviews__slide swiper-slide">
+									<div class="item-review">
+										<img loading="lazy" class="item-review__icon" src="@img/reviews/quotes.svg" alt="Image">
+										<p class="item-review__text">
+											TRL 9 on day one is meaningless. Most equipment fails once exposed to real combat conditions.
+										</p>
+										<div class="item-review__author">
+											Ken Toth, U.S. Special Forces
+										</div>
+									</div>
+								</div>
+								<div class="reviews__slide swiper-slide">
+									<div class="item-review">
+										<img loading="lazy" class="item-review__icon" src="@img/reviews/quotes.svg" alt="Image">
+										<p class="item-review__text">
+											Drones from the West fail on the field of battle.
+										</p>
+										<div class="item-review__author">
+											Ukrainian Drone Operator
+										</div>
+									</div>
+								</div>
+								<div class="reviews__slide swiper-slide">
+									<div class="item-review">
+										<img loading="lazy" class="item-review__icon" src="@img/reviews/quotes.svg" alt="Image">
+										<p class="item-review__text">
+											TRL 9 on day one is meaningless. Most equipment fails once exposed to real combat conditions.
+										</p>
+										<div class="item-review__author">
+											Ken Toth, U.S. Special Forces
+										</div>
 									</div>
 								</div>
 							</div>
-							<div class="reviews__slide swiper-slide">
-								<div class="item-review">
-									<img class="item-review__icon" src="@img/reviews/quotes.svg" alt="Image">
-									<p class="item-review__text">
-										TRL 9 on day one is meaningless. Most equipment fails once exposed to real combat conditions.
-									</p>
-									<div class="item-review__author">
-										Ken Toth, U.S. Special Forces
-									</div>
-								</div>
-							</div>
-							<div class="reviews__slide swiper-slide">
-								<div class="item-review">
-									<img class="item-review__icon" src="@img/reviews/quotes.svg" alt="Image">
-									<p class="item-review__text">
-										Drones from the West fail on the field of battle.
-									</p>
-									<div class="item-review__author">
-										Ukrainian Drone Operator
-									</div>
-								</div>
-							</div>
-							<div class="reviews__slide swiper-slide">
-								<div class="item-review">
-									<img class="item-review__icon" src="@img/reviews/quotes.svg" alt="Image">
-									<p class="item-review__text">
-										TRL 9 on day one is meaningless. Most equipment fails once exposed to real combat conditions.
-									</p>
-									<div class="item-review__author">
-										Ken Toth, U.S. Special Forces
-									</div>
+							<div class="reviews__navigation navigation">
+								<div class="navigation__pagination"></div>
+								<div class="navigation__buttons">
+									<button type="button" class="navigation__button navigation__button--prev" aria-label="arrow-left">
+										<svg>
+											<use xlink:href="@img/icons/icons.svg#arrow-left"></use>
+										</svg>
+									</button>
+									<button type="button" class="navigation__button navigation__button--next" aria-label="arrow-right">
+										<svg>
+											<use xlink:href="@img/icons/icons.svg#arrow-right"></use>
+										</svg>
+									</button>
 								</div>
 							</div>
 						</div>
-						<div class="navigation">
-							<div class="navigation__pagination"></div>
-							<button class="navigation__button navigation__button--prev" aria-label="arrow-left">
-								<svg>
-									<use xlink:href="@img/icons/icons.svg#arrow-left"></use>
-								</svg>
-							</button>
-							<button class="navigation__button navigation__button--next" aria-label="arrow-right">
-								<svg>
-									<use xlink:href="@img/icons/icons.svg#arrow-right"></use>
-								</svg>
-							</button>
-						</div>
-
-						<button type="button" class="swiper-button-prev"></button>
-						<button type="button" class="swiper-button-next"></button>
-
 					</div>
 
-					<img class="reviews__bottom-icon" src="@img/reviews/icon-bottom.svg" alt="icon">
+
+					<img loading="lazy" class="reviews__bottom-icon" src="@img/reviews/icon-bottom.svg" alt="icon">
 				</div>
-				<img class="reviews__bg" src="@img/reviews/bg.svg" alt="background">
+				<img loading="lazy" class="reviews__bg" src="@img/reviews/bg.svg" alt="background">
 			</section>
 
 
 			<section class="story section" aria-labelledby="story">
 				<div class="story__container">
-					<img class="story__top-icon" src="@img/story/icon-top.svg" alt="icon">
+					<img loading="lazy" class="story__top-icon" src="@img/story/icon-top.svg" alt="icon">
 					<div class="story__content ">
-						<img class="story__icon" src="@img/story/icon-title.svg" alt="icon">
+						<img loading="lazy" class="story__icon" src="@img/story/icon-title.svg" alt="icon">
 
 						<h2 class="story__title title title--2 title--gray" id="story">
 							Brand <span text="Story">Story</span>
-							<img class="story__title-decor" src="@img/story/title-decor.svg" alt="title-decor">
+							<img loading="lazy" class="story__title-decor" src="@img/story/title-decor.svg" alt="title-decor">
 						</h2>
 						<div class="story__text">
 							<p>

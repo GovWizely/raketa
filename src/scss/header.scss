@@ -1,5 +1,6 @@
 .header {
 	position: fixed;
+	// position: absolute;
 	width: 100%;
 	height: fit-content;
 	top: 0;
@@ -26,6 +27,16 @@
 		flex-shrink: 0;
 		position: relative;
 		z-index: 2;
+		transition: all 0.3s ease;
+		._header-scroll & {
+			transform: translateY(toRem(-40));
+			opacity: 0;
+
+			.menu-open & {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
 		@media (min-width: $mobile) {
 			width: toRem(50);
 			height: toRem(53);
@@ -37,6 +48,11 @@
 	}
 	// .header__menu
 	&__menu {
+		// position: fixed;
+		// top: toRem(30);
+		// left: 0;
+		// width: fit-content;
+		// height: fit-content;
 	}
 }
 .menu {

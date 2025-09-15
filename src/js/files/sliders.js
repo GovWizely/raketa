@@ -36,9 +36,9 @@ function initSliders() {
 			modules: [Navigation, Pagination],
 			observer: true,
 			observeParents: true,
-			slidesPerView: 2,
-			spaceBetween: 24,
-			//autoHeight: true,
+			slidesPerView: 1,
+			spaceBetween: 32,
+			// autoHeight: true,
 			speed: 800,
 
 			//touchRatio: 0,
@@ -78,27 +78,24 @@ function initSliders() {
 				prevEl: '.swiper-reviews .navigation__button--prev',
 				nextEl: '.swiper-reviews .navigation__button--next',
 			},
-			/*
-			// Брейкпоінти
+
 			breakpoints: {
-				640: {
+
+				480: {
 					slidesPerView: 1,
-					spaceBetween: 0,
+					spaceBetween: 16,
 					autoHeight: true,
 				},
-				768: {
+				640: {
 					slidesPerView: 2,
-					spaceBetween: 20,
+					spaceBetween: 24,
+					autoHeight: false,
 				},
-				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
+
 			},
+			/*
+			// Брейкпоінти
+
 			*/
 			// Події
 			on: {
