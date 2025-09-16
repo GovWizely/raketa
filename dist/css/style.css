@@ -491,7 +491,6 @@ body {
 }
 .hero__image {
   position: absolute;
-  right: 0;
   -o-object-fit: contain;
   object-fit: contain
 }
@@ -597,7 +596,8 @@ body {
   position: absolute;
   -o-object-fit: contain;
   object-fit: contain;
-  z-index: -1
+  z-index: -1;
+  max-width: initial
 }
 .drones__text span {
   color: var(--air-accent)
@@ -865,8 +865,7 @@ body {
     top: 9.375rem;
     width: 50rem;
     height: 32.3125rem;
-    -webkit-transform: translateX(46%);
-    transform: translateX(46%)
+    right: -21.375rem
   }
   .hero__title-decor {
     left: -9.5rem
@@ -908,18 +907,14 @@ body {
   .drones__title-decor {
     width: 35rem;
     height: 29.875rem;
-    top: 50%;
-    -webkit-transform: translateX(-50%) translateY(-45%);
-    transform: translateX(-50%) translateY(-45%);
-    left: 0
+    left: -18.75rem;
+    top: -10.0625rem
   }
   .drones__bg {
     width: 48.3125rem;
     height: 36.25rem;
-    top: 6.25rem;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    left: 0
+    top: 6.875rem;
+    left: -26.1875rem
   }
   .partnership__top-icon:not(:last-child) {
     margin-bottom: 15.5625rem
@@ -987,8 +982,7 @@ body {
     top: -1.875rem;
     width: 76.5625rem;
     height: 49.4375rem;
-    -webkit-transform: translateX(42%);
-    transform: translateX(42%)
+    right: -28.125rem
   }
   .hero__content {
     max-width: 64.75rem
@@ -1042,20 +1036,18 @@ body {
   .drones__title-decor {
     width: 53.75rem;
     height: 45.8125rem;
-    top: 50%;
-    -webkit-transform: translateX(-55%) translateY(-45%);
-    transform: translateX(-55%) translateY(-45%)
+    left: -29.25rem;
+    top: -16.5rem
   }
   .drones__description {
     max-width: 24.5rem;
     font-size: 1.875rem
   }
   .drones__bg {
-    top: 0;
+    top: -10rem;
+    left: -51.75rem;
     width: 85.3125rem;
-    height: 64rem;
-    -webkit-transform: translateX(-62%);
-    transform: translateX(-62%)
+    height: 64rem
   }
   .partnership__top-icon:not(:last-child) {
     margin-bottom: 14.0625rem
@@ -1228,8 +1220,7 @@ body {
     top: 10rem;
     width: 43.75rem;
     height: 28.25rem;
-    -webkit-transform: translateX(46%);
-    transform: translateX(46%)
+    right: -18.625rem
   }
   .hero__title-decor {
     left: -8.5rem
@@ -1252,12 +1243,10 @@ body {
     margin-bottom: 22.6875rem
   }
   .drones__title-decor {
-    width: 36.875rem;
-    height: 27.6875rem;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%)
+    width: 28.75rem;
+    height: 24.5rem;
+    left: -4.125rem;
+    top: -10.875rem
   }
   .drones__description {
     max-width: 21.5rem

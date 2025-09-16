@@ -32,26 +32,30 @@
 	// .hero__image
 	&__image {
 		position: absolute;
-		right: 0;
+		// right: 0;
 		object-fit: contain;
+		// background-color: rgba(255, 0, 0, 0.5);
 
 		@media (min-width: $mobileSmall) {
 			top: toRem(150);
 			width: toRem(800);
 			height: toRem(517);
-			transform: translateX(46%);
+			// transform: translateX(46%);
+			right: toRem(-342);
 		}
 		@media (min-width: $mobile) {
 			top: toRem(-30);
 			width: toRem(1225);
 			height: toRem(791);
-			transform: translateX(42%);
+			// transform: translateX(42%);
+			right: toRem(-450);
 		}
 		@media (max-width: $mobileSmall) {
 			top: toRem(160);
 			width: toRem(700);
 			height: toRem(452);
-			transform: translateX(46%);
+			right: toRem(-298);
+			// transform: translateX(46%);
 		}
 	}
 	// .hero__content
@@ -332,25 +336,34 @@
 		position: absolute;
 		object-fit: contain;
 		z-index: -1;
+
+		// background-color: rgba(255, 0, 0, 0.5);
+		max-width: initial;
 		@media (min-width: $mobileSmall) {
 			width: toRem(560);
 			height: toRem(478);
-			top: 50%;
-			transform: translateX(-50%) translateY(-45%);
-			left: 0;
+			// top: 50%;
+			// transform: translateX(-50%) translateY(-45%);
+			// left: 0;
+			left: toRem(-300);
+			top: toRem(-161);
 		}
 		@media (min-width: $mobile) {
 			width: toRem(860);
 			height: toRem(733);
-			top: 50%;
-			transform: translateX(-55%) translateY(-45%);
+			// top: 50%;
+			// transform: translateX(-55%) translateY(-45%);
+			left: toRem(-468);
+			top: toRem(-264);
 		}
 		@media (max-width: $mobileSmall) {
-			width: toRem(590);
-			height: toRem(443);
-			top: 50%;
-			left: 50%;
-			transform: translateX(-50%) translateY(-50%);
+			width: toRem(460);
+			height: toRem(392);
+			// top: 50%;
+			// left: 50%;
+			// transform: translateX(-50%) translateY(-50%);
+			left: toRem(-66);
+			top: toRem(-174);
 		}
 	}
 	// .drones__text
@@ -418,15 +431,14 @@
 		@media (min-width: $mobileSmall) {
 			width: toRem(773);
 			height: toRem(580);
-			top: toRem(100);
-			transform: translateX(-50%);
-			left: 0;
+			top: toRem(110);
+			left: toRem(-419);
 		}
 		@media (min-width: $mobile) {
-			top: 0;
+			top: toRem(-160);
+			left: toRem(-828);
 			width: toRem(1365);
 			height: toRem(1024);
-			transform: translateX(-62%);
 		}
 		@media (max-width: $mobileSmall) {
 			width: toRem(590);
