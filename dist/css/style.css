@@ -252,14 +252,13 @@ body {
   line-height: .92
 }
 .title--2 span {
-  color: var(--white);
   position: relative;
   display: inline-block;
   line-height: inherit;
   height: -moz-fit-content;
   height: -webkit-fit-content;
   height: fit-content;
-  line-height: 1.22
+  line-height: .92
 }
 .title--2 span::before {
   display: inline-block;
@@ -272,12 +271,11 @@ body {
   height: -webkit-fit-content;
   height: fit-content;
   text-wrap: nowrap;
-  top: 50%;
-  left: 50%;
+  -webkit-transform: translateX(-.125rem);
+  transform: translateX(-.125rem);
   font-size: inherit;
-  -webkit-transform: translate(-51%,-51%);
-  transform: translate(-51%,-51%);
-  line-height: inherit
+  line-height: 1.2;
+  margin-top: -.1375em
 }
 .title--yellow span::before {
   background: linear-gradient(248deg,#f2edd4 0,#b9b6a6 49.52%,#c9c197 100%);
@@ -307,7 +305,8 @@ body {
   font-weight: 900;
   font-size: .75rem;
   text-transform: uppercase;
-  color: var(--navy)
+  color: var(--navy);
+  letter-spacing: 0
 }
 .section {
   position: relative
@@ -390,16 +389,6 @@ body {
   z-index: 2;
   transition: all .3s ease
 }
-._header-scroll .header__logo {
-  -webkit-transform: translateY(-2.5rem);
-  transform: translateY(-2.5rem);
-  opacity: 0
-}
-.menu-open ._header-scroll .header__logo {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-  transform: translateY(0)
-}
 .menu__body {
   position: fixed;
   width: 100%;
@@ -455,7 +444,7 @@ body {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg)
 }
-.footer__container {
+.footer__wrap {
   border-top: .0625rem solid #6f818b;
   display: flex;
   align-items: center;
@@ -518,9 +507,9 @@ body {
   position: absolute;
   width: 34.375rem;
   height: .8125rem;
-  bottom: 0;
   -o-object-fit: contain;
-  object-fit: contain
+  object-fit: contain;
+  z-index: -1
 }
 .hero__text {
   display: grid;
@@ -565,8 +554,7 @@ body {
   position: absolute;
   -o-object-fit: contain;
   object-fit: contain;
-  z-index: -1;
-  bottom: -.75rem
+  z-index: -1
 }
 .companies__list {
   display: grid
@@ -586,18 +574,25 @@ body {
   object-fit: contain
 }
 .drones__content {
-  position: relative;
-  z-index: 2
+  position: relative
 }
 .drones__title:not(:last-child) {
   margin-bottom: 2.5rem
 }
-.drones__title-decor {
+.drones__media {
+  position: absolute
+}
+.drones__bg,
+.drones__decor {
   position: absolute;
   -o-object-fit: contain;
   object-fit: contain;
-  z-index: -1;
   max-width: initial
+}
+.drones__bg {
+  width: 100%;
+  height: 100%;
+  inset: 0
 }
 .drones__text span {
   color: var(--air-accent)
@@ -638,11 +633,6 @@ body {
   -o-object-fit: contain;
   object-fit: contain
 }
-.drones__bg {
-  position: absolute;
-  -o-object-fit: contain;
-  object-fit: contain
-}
 .partnership__container {
   position: relative
 }
@@ -677,8 +667,7 @@ body {
   position: absolute;
   -o-object-fit: contain;
   object-fit: contain;
-  z-index: -1;
-  bottom: -.6875rem
+  z-index: -1
 }
 .partnership__text {
   display: grid;
@@ -711,23 +700,16 @@ body {
   z-index: 1
 }
 .reviews__title sup {
-  opacity: .3;
-  padding-bottom: .625rem
+  opacity: .3
 }
 .reviews__title span {
   flex: 0 0 fit-content;
-  opacity: 1;
-  line-height: 1;
-  margin-bottom: -.3125rem
-}
-.reviews__title span::before {
-  line-height: 1
+  opacity: 1
 }
 .reviews__title-decor {
   position: absolute;
   width: 34.375rem;
   height: .8125rem;
-  bottom: 0;
   z-index: -1;
   -o-object-fit: contain;
   object-fit: contain
@@ -854,7 +836,7 @@ body {
   .header__container {
     min-height: 6.875rem
   }
-  .footer__container {
+  .footer__wrap {
     justify-content: space-between;
     padding-block: 2.6875rem
   }
@@ -868,7 +850,8 @@ body {
     right: -21.375rem
   }
   .hero__title-decor {
-    left: -9.5rem
+    left: -9.5rem;
+    bottom: -.125rem
   }
   .hero__text {
     grid-template-columns: repeat(2,1fr)
@@ -883,9 +866,10 @@ body {
     margin-bottom: 5rem
   }
   .companies__title-decor {
-    width: 39.9375rem;
-    height: 17.625rem;
-    left: -1.4375rem
+    width: 32.125rem;
+    height: 14.1875rem;
+    left: -1.4375rem;
+    bottom: -.625rem
   }
   .companies__list {
     grid-template-columns: repeat(2,1fr);
@@ -904,29 +888,36 @@ body {
     max-width: 21.5rem;
     margin-left: auto
   }
-  .drones__title-decor {
-    width: 35rem;
-    height: 29.875rem;
-    left: -18.75rem;
-    top: -10.0625rem
-  }
-  .drones__bg {
+  .drones__media {
     width: 48.3125rem;
     height: 36.25rem;
     top: 6.875rem;
-    left: -26.1875rem
+    left: -24.1875rem
+  }
+  .drones__decor {
+    width: 35rem;
+    height: 29.875rem;
+    right: -16.6875rem;
+    top: -.5625rem
   }
   .partnership__top-icon:not(:last-child) {
     margin-bottom: 15.5625rem
   }
   .partnership__title-decor {
-    left: -1.1875rem
+    left: -1.1875rem;
+    bottom: -.6875rem
   }
   .reviews__top-icon:not(:last-child) {
     margin-bottom: 9.25rem
   }
+  .reviews__title {
+    padding-left: .875rem;
+    gap: .5rem;
+    margin-bottom: -.5rem
+  }
   .reviews__title-decor {
-    right: -13.375rem
+    right: -13.375rem;
+    bottom: -.125rem
   }
   .reviews__bottom-icon {
     margin-top: 10rem
@@ -966,7 +957,7 @@ body {
     width: 3.125rem;
     height: 3.3125rem
   }
-  .footer__container {
+  .footer__wrap {
     padding-block: 2.625rem 5.125rem
   }
   .footer__copyright {
@@ -988,7 +979,8 @@ body {
     max-width: 64.75rem
   }
   .hero__title-decor {
-    left: -13.125rem
+    left: -13.125rem;
+    bottom: 0
   }
   .hero__text {
     gap: 4.75rem
@@ -1033,21 +1025,21 @@ body {
   .drones__content {
     max-width: 37.5rem
   }
-  .drones__title-decor {
-    width: 53.75rem;
-    height: 45.8125rem;
-    left: -29.25rem;
-    top: -16.5rem
-  }
-  .drones__description {
-    max-width: 24.5rem;
-    font-size: 1.875rem
-  }
-  .drones__bg {
+  .drones__media {
     top: -10rem;
     left: -51.75rem;
     width: 85.3125rem;
     height: 64rem
+  }
+  .drones__decor {
+    width: 53.75rem;
+    height: 45.8125rem;
+    right: -29.9375rem;
+    top: 1.75rem
+  }
+  .drones__description {
+    max-width: 24.5rem;
+    font-size: 1.875rem
   }
   .partnership__top-icon:not(:last-child) {
     margin-bottom: 14.0625rem
@@ -1066,11 +1058,12 @@ body {
     margin-right: 6.5rem
   }
   .reviews__title {
-    margin-bottom: -1.25rem;
-    gap: .5rem
+    gap: 1rem;
+    margin-bottom: -1.0625rem
   }
   .reviews__title-decor {
-    right: -17.6875rem
+    right: -17.6875rem;
+    bottom: .4375rem
   }
   .reviews__bottom-icon {
     margin-top: 11rem;
@@ -1085,7 +1078,7 @@ body {
     height: -moz-fit-content;
     height: -webkit-fit-content;
     height: fit-content;
-    top: 50%;
+    top: calc(50% - 2.25rem/2);
     left: 0;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%)
@@ -1118,17 +1111,29 @@ body {
   }
 }
 @media (min-width:61.99875em) {
+  .title--2 {
+    font-size: 4.875rem
+  }
   .menu__list {
     max-width: 75rem;
     margin-inline: auto
   }
+  .companies__title-decor {
+    width: 39.9375rem;
+    height: 17.625rem;
+    left: -1.4375rem;
+    bottom: -.75rem
+  }
+  .reviews__title sup {
+    padding-bottom: .375rem
+  }
 }
 @media (min-width:76.5em) {
-  .title--2 {
-    font-size: 4.875rem
-  }
   .menu__link {
     font-size: 2rem
+  }
+  .reviews__title sup {
+    font-size: 4.875rem
   }
   .reviews__title span {
     font-size: 8.75rem
@@ -1170,9 +1175,6 @@ body {
     width: 30.6875rem;
     height: 10.5rem
   }
-  .reviews__title {
-    margin-bottom: -.5rem
-  }
   .reviews__navigation {
     margin-top: 1.5rem;
     display: flex;
@@ -1202,6 +1204,11 @@ body {
     gap: 2rem
   }
 }
+@media (max-width:41.75em) {
+  .title--2 {
+    font-size: 3.25rem
+  }
+}
 @media (max-width:29.99875em) {
   [class*=__container] {
     padding-inline: 1rem
@@ -1209,7 +1216,7 @@ body {
   .section {
     padding-block: 8.125rem 6.25rem
   }
-  .footer__container {
+  .footer__wrap {
     padding-block: 2.5rem;
     flex-direction: column-reverse
   }
@@ -1223,7 +1230,8 @@ body {
     right: -18.625rem
   }
   .hero__title-decor {
-    left: -8.5rem
+    left: -8.5rem;
+    bottom: -.0625rem
   }
   .companies__top-icon:not(:last-child) {
     margin-bottom: 6.875rem
@@ -1234,7 +1242,8 @@ body {
   .companies__title-decor {
     width: 32.125rem;
     height: 14.1875rem;
-    left: -4.4375rem
+    left: -4.4375rem;
+    bottom: -.5rem
   }
   .companies__list {
     gap: 3rem
@@ -1242,32 +1251,37 @@ body {
   .drones__top-icon:not(:last-child) {
     margin-bottom: 22.6875rem
   }
-  .drones__title-decor {
+  .drones__media {
+    width: 36.875rem;
+    height: 27.6875rem;
+    top: 10.0625rem;
+    left: 4.0625rem
+  }
+  .drones__decor {
     width: 28.75rem;
     height: 24.5rem;
-    left: -4.125rem;
-    top: -10.875rem
+    left: -7.25rem;
+    top: 5.0625rem
   }
   .drones__description {
     max-width: 21.5rem
-  }
-  .drones__bg {
-    width: 36.875rem;
-    height: 27.6875rem;
-    top: 9.75rem;
-    left: 3.125rem
   }
   .partnership__top-icon:not(:last-child) {
     margin-bottom: 11.5625rem
   }
   .partnership__title-decor {
-    left: -2.3125rem
+    left: -2.3125rem;
+    bottom: -.5rem
   }
   .reviews__top-icon:not(:last-child) {
     margin-bottom: 8.125rem
   }
+  .reviews__title {
+    margin-bottom: -.5rem
+  }
   .reviews__title-decor {
-    right: -10.3125rem
+    right: -10.3125rem;
+    bottom: .125rem
   }
   .reviews__bottom-icon {
     margin-top: 10.25rem
@@ -1283,22 +1297,27 @@ body {
   }
 }
 @media (max-width:22.5em) {
-  .title--2 {
-    font-size: 3.25rem
-  }
   .menu__link {
     font-size: 1.5rem
+  }
+  .reviews__title sup {
+    font-size: 2.75rem
   }
   .reviews__title span {
     font-size: 5rem
   }
 }
-@media (min-width:22.5em)and (max-width:76.5em) {
+@media (min-width:41.75em)and (max-width:61.99875em) {
   .title--2 {
-    font-size: clamp(3.25rem ,2.5729166667rem + 3.0092592593vw ,4.875rem)
+    font-size: clamp(3.25rem ,-.1005154639rem + 8.0251867399vw ,4.875rem)
   }
+}
+@media (min-width:22.5em)and (max-width:76.5em) {
   .menu__link {
     font-size: clamp(1.5rem ,1.2916666667rem + .9259259259vw ,2rem)
+  }
+  .reviews__title sup {
+    font-size: clamp(2.75rem ,1.8645833333rem + 3.9351851852vw ,4.875rem)
   }
   .reviews__title span {
     font-size: clamp(5rem ,3.4375rem + 6.9444444444vw ,8.75rem)

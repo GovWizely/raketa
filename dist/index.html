@@ -19,7 +19,7 @@
 	</style>
 
 	<meta name="format-detection" content="telephone=no">
-	<link rel="stylesheet" href="css/style.min.css?_v=20250916204937">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250919222425">
 	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 
@@ -27,7 +27,7 @@
 	Speed of Readiness">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script src="js/app.min.js?_v=20250916204937" defer></script>
+	<script src="js/app.min.js?_v=20250919222425" defer></script>
 </head>
 
 <body>
@@ -131,13 +131,16 @@
 
 			<section class="drones section" aria-labelledby="drones">
 				<div class="drones__container">
-					<img loading="lazy" class="drones__bg left delay-3" data-watch data-watch-once src="img/drones/quadrocopter.webp" alt="quadrocopter">
+					<div class="drones__media">
+						<img loading="lazy" class="drones__decor delay-5" data-watch data-watch-once src="img/drones/title-docor.svg" alt="title-decor">
+						<img loading="lazy" class="drones__bg left delay-3" data-watch data-watch-once src="img/drones/quadrocopter.webp" alt="quadrocopter">
+					</div>
+
 
 					<img loading="lazy" class="drones__top-icon" src="img/drones/icon-top.svg" alt="icon">
 					<div class="drones__content">
 						<h2 class="drones__title title title--2 title--gray right" data-watch data-watch-once id="drones">
 							AI-Powered <span text="Drones">Drones</span>
-							<img loading="lazy" class="drones__title-decor delay-4" data-watch data-watch-once src="img/drones/title-docor.svg" alt="title-decor">
 						</h2>
 						<p class="drones__text bottom" data-watch data-watch-once>
 							Unmanned platforms built to perform in <span>contested environments:</span>
@@ -165,7 +168,7 @@
 					<img loading="lazy" class="partnership__top-icon" src="img/partnership/icon-top.svg" alt="icon">
 					<div class="partnership__content ">
 						<img loading="lazy" class="partnership__icon" src="img/partnership/icon-title.svg" alt="icon">
-						<h2 class="partnership__title title title--2 title--violet right" data-watch data-watch-once id="partnership">
+						<h2 class="partnership__title title title--2 title--violet left" data-watch data-watch-once id="partnership">
 							Partnership & <br> <span text="Bridge Role">Bridge Role</span>
 							<img loading="lazy" class="partnership__title-decor delay-2" data-watch data-watch-once src="img/partnership/title-decor.svg" alt="title-decor">
 						</h2>
@@ -201,7 +204,7 @@
 					<img loading="lazy" class="reviews__top-icon" src="img/reviews/icon-top.svg" alt="icon">
 
 					<h2 class="reviews__title title title--2 title--yellow right" id="reviews" data-watch data-watch-once>
-						<sup>Voices from the</sup> <span text="Field">Field</span>
+						<sup>Voices from the</sup> <span text="Field"> Field</span>
 						<img loading="lazy" class="reviews__title-decor delay-2" src="img/hero/title-decor.svg" alt="title-decor" data-watch data-watch-once>
 					</h2>
 					<div class="reviews__body bottom" data-watch data-watch-once>
@@ -308,21 +311,24 @@
 		</main>
 		<footer class="footer">
 			<div class="footer__container">
-				<div class="footer__copyright">
-					© 2025 Paketa,LLC
+				<div class="footer__wrap">
+					<div class="footer__copyright">
+						© 2025 Paketa, LLC
+					</div>
+					<div class="footer__socials">
+						<a href="#" aria-label="linkedin" class="footer__social-link">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#linkedin"></use>
+							</svg>
+						</a>
+						<a href="#" aria-label="butterfly" class="footer__social-link">
+							<svg>
+								<use xlink:href="img/icons/icons.svg#butterfly"></use>
+							</svg>
+						</a>
+					</div>
 				</div>
-				<div class="footer__socials">
-					<a href="#" aria-label="linkedin" class="footer__social-link">
-						<svg>
-							<use xlink:href="img/icons/icons.svg#linkedin"></use>
-						</svg>
-					</a>
-					<a href="#" aria-label="butterfly" class="footer__social-link">
-						<svg>
-							<use xlink:href="img/icons/icons.svg#butterfly"></use>
-						</svg>
-					</a>
-				</div>
+
 			</div>
 		</footer>
 	</div>

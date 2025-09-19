@@ -1,6 +1,9 @@
 .footer {
 	// .footer__container
 	&__container {
+	}
+	// .footer__wrap
+	&__wrap {
 		border-top: toRem(1) solid #6f818b;
 		display: flex;
 		align-items: center;

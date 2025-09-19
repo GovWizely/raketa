@@ -28,15 +28,15 @@
 		position: relative;
 		z-index: 2;
 		transition: all 0.3s ease;
-		._header-scroll & {
-			transform: translateY(toRem(-40));
-			opacity: 0;
+		// ._header-scroll & {
+		// 	transform: translateY(toRem(-40));
+		// 	opacity: 0;
 
-			.menu-open & {
-				opacity: 1;
-				transform: translateY(0);
-			}
-		}
+		// 	.menu-open & {
+		// 		opacity: 1;
+		// 		transform: translateY(0);
+		// 	}
+		// }
 		@media (min-width: $mobile) {
 			width: toRem(50);
 			height: toRem(53);
