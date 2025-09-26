@@ -1,0 +1,40 @@
+@@include('html/_head.htm',{"title":"Contact Us"})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page ">
+			<section class="hero section section--yellow" aria-labelledby="hero">
+				<div class="hero__container">
+					<img class="hero__image  right delay-5" data-watch data-watch-once src="@img/hero/turrel.png" alt="turrel">
+					<div class="hero__content">
+						<img class="hero__icon" src="@img/hero/title-icon.svg" alt="icon">
+						<h2 class="hero__title title title--2 title--yellow left delay-2" data-watch data-watch-once id="hero">
+							<span text="Contact Us">Contact Us</span>
+						</h2>
+<div id="contact-form"></div>
+<form id="my-form" class="form" action="https://formspree.io/f/xovkagvj" method="POST">
+  <label>Name
+    <input type="text" class="__input input" name="name" required>
+  </label>
+  <label>Email
+    <input type="email" class="__input input" name="email" required>
+  </label>
+  <label>Message
+    <textarea name="message" class="__input input" required></textarea>
+  </label>
+  <br>
+  <button class="button" type="submit">Send</button>
+  <p id="my-form-status"></p>
+</form>
+		</div>
+
+					</div>
+					</section>
+					</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
